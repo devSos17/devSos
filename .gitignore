@@ -1,0 +1,44 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+
+# Dependency directory
+# https://docs.npmjs.com/misc/faq#should-i-check-my-node-modules-folder-into-git
+node_modules
+
+# Environment key file
+.env
+.env.*
+!.env.example
+.secrets
+
+# OS X tmp
+.DS_Store
+
+# Tests
+reports
+
+# Terraform
+.terraform
+terraform.tfstate
+terraform.tfstate.backup
+errored.tfstate
+
+# K8s
+provision/.kube
+provision/.ssh
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Provision
+provision/.*/*
+
+./dist
