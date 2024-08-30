@@ -23,6 +23,8 @@ dev-cv: ## Run dev for CV lambda
 	@cd ./api/cv && cargo lambda watch
 
 dev-app: ## Run astro dev
-	@cd ./app && npm run dev
+	@docker compose --profile dev up -d --force-recreate
 
-# dev: dev-app dev-cv 
+dev: dev-app # dev-cv 
+dev-dn: 
+	@docker compose --profile dev down

@@ -1,0 +1,17 @@
+services: 
+  dev-app:
+    build:
+      context: app
+      dockerfile: docker/Dockerfile
+      target: dev
+    ports:
+      - 4321:4321
+    volumes:
+      - ./app:/home/node/app
+      - /home/node/app/node_modules
+    profiles:
+      - dev
+
+networks:
+  default:
+    name: devsos
