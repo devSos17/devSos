@@ -7,7 +7,7 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
@@ -22,29 +22,29 @@ const { title } = Astro.props;
 </html>
 <style is:global>
 	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
+		/* theme 1 dark? */
+		--content: 43, 57%, 88%; /* parchment | kind of white */
+		--main-bg: 141, 21%, 13%; /* DARK green */
+		--primay: 132, 29%, 31%;
+		--secondary: 98, 32%, 45%;
+		--accent1: 78, 51%, 56%; /* nice bright green */
+		--accent2: 359, 47%, 51%; /* nice red */
+		--accent3: 43, 57%, 88%; /* parchment */
 	}
+	/* @media (prefers-color-schem: dark) { */
+	:root[data-theme="theme1"] {
+		/* theme 2 */
+		--content: 0, 0%, 100%; /* white */
+		--main-bg: 126, 42%, 5%; /* midnight */
+		--primay: 132, 29%, 31%;
+		--secondary: 49, 10, 101;
+		--accent1: 92, 32%, 56%; /* olivine */
+		--accent2: 181, 73%, 26%; /* caribbean Current */
+		--accent3: 356, 63%, 54%; /* rusty red */
+	}
+
 	html {
 		font-family: system-ui, sans-serif;
 		background: #13151a;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
 	}
 </style>
