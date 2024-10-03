@@ -1,0 +1,34 @@
+---
+import Button from "./Button.astro";
+
+const links = [
+	{ href: "#projects", text: "Projects" },
+	{ href: "#contact", text: "Contact" },
+	{ href: "#about", text: "About" },
+	{ href: "/cv", text: "CV" , class:"bg-accent-1 text-main hover:bg-main"},
+];
+---
+
+<nav
+	id="header"
+	class={`left-1/2 -translate-x-1/2 top-4 sticky z-20
+	hidden md:flex w-fit 
+	justify-center items-center text-center gap-4 px-4
+	bg-blend-color-burn bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-5 
+	rounded-full
+	bg-primary-80
+	shadow-inner shadow-main
+`}
+>
+	{
+		links.map((link) => (
+			<Button
+		class=`flex-1 my-2 border-content shadow-inner shadow-primary hover:text-accent-1 ${link?.class}`
+				href={link.href}
+			>
+				{link.text}
+			</Button>
+		))
+	
+}
+</nav>

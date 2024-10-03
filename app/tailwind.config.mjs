@@ -4,16 +4,27 @@ export default {
   theme: {
     extend: {
       colors: {
-        content: "hsl(var(--content))",
-        primary: "hsl(var(--primary))",
-        secondary: "hsl(var(--secondary))",
-        accent: {
-          1: "hsl(var(--accent1))",
-          2: "hsl(var(--accent2))",
-          3: "hsl(var(--accent3))",
+        main: "var(--main)",
+        content: "var(--content)",
+        primary: {
+          10: "color-mix(in srgb, var(--primary), transparent 90%)",
+          20: "color-mix(in srgb, var(--primary), transparent 80%)",
+          30: "color-mix(in srgb, var(--primary), transparent 70%)",
+          40: "color-mix(in srgb, var(--primary), transparent 60%)",
+          50: "color-mix(in srgb, var(--primary), transparent 50%)",
+          60: "color-mix(in srgb, var(--primary), transparent 40%)",
+          70: "color-mix(in srgb, var(--primary), transparent 30%)",
+          80: "color-mix(in srgb, var(--primary), transparent 20%)",
+          90: "color-mix(in srgb, var(--primary), transparent 10%)",
+          100: "var(--primary)",
         },
-        accent_gradient:
-          "linear-gradient( 45deg, rgb(var(--accent1)), rgb(var(--accent2)) 30%, white 60%)",
+        secondary: "var(--secondary)",
+        accent: {
+          1: "var(--accent1)",
+          2: "var(--accent2)",
+          3: "var(--accent3)",
+        },
+        accent_gradient: "var(--accent-gradient)",
       },
     },
   },

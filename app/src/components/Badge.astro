@@ -1,0 +1,15 @@
+---
+interface Props {
+	class?: string;
+}
+
+const { class: classes, ...rest } = Astro.props;
+---
+
+<div
+	class={`px-4 py-2 rounded-full font-semibold  shadow-md focus:outline-none focus:ring-2 focus:ring-accent-1 ${classes} `}
+	{...rest}
+>
+	<slot name="icon" />
+	<slot />
+</div>

@@ -1,0 +1,61 @@
+{"experiences":[
+	{
+"start": "Apr 2023",
+"end": "May 2024",
+"title": "DevOps Engineer",
+"company": "Birkman",
+"location": "Houston, USA",
+"modality": "Remote",
+"activites": ["Some shite", "more shite"],
+"skills": ["AWS", "docker"]
+	},
+	{
+"start": "Apr 2023",
+"title": "Medium DevOps",
+"company": "SHMerida",
+"location": "Merida, México",
+"modality": "Remote",
+"activites": ["Some shite", "more shite"],
+"skills": ["Github Actions", "docker"]
+	},
+	{
+"start": "Apr 2023",
+"end": "May 2024",
+"title": "DevOps Engineer",
+"company": "Birkman",
+"location": "Houston, USA",
+"modality": "Remote",
+"activites": ["Some shite", "more shite"],
+"skills": ["AWS", "docker"]
+	},
+	{
+"start": "Apr 2023",
+"end": "May 2024",
+"title": "DevOps Engineer",
+"company": "Birkman",
+"location": "Houston, USA",
+"modality": "Remote",
+"activites": ["Some shite", "more shite"],
+"skills": ["AWS", "docker"]
+	},
+	{
+"start": "Apr 2023",
+"end": "May 2024",
+"title": "DevOps Engineer",
+"company": "Birkman",
+"location": "Houston, USA",
+"modality": "Remote",
+"activites": ["Some shite", "more shite"],
+"skills": ["AWS", "docker"]
+	},
+	{
+"start": "Apr 2023",
+"end": "May 2024",
+"title": "DevOps Engineer",
+"company": "Birkman",
+"location": "Houston, USA",
+"modality": "Remote",
+"activites": ["Some shite", "more shite"],
+"skills": ["AWS", "docker"]
+	}
+]}

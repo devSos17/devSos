@@ -1,0 +1,33 @@
+---
+import Section from "../components/Section.astro";
+interface Props {
+	id: string;
+	title?: string;
+	subtitle?: string;
+	class?: string;
+}
+
+const { id, class: classes, title, subtitle, ...rest } = Astro.props;
+---
+
+<Section
+	id={id}
+	class={`hero m-auto flex items-center text-center justify-center flex-col gap-8 ${classes}`}
+	{...rest}
+>
+	<h1 class="mt-8 h-8 text-9xl font-bold leading-4 text-center mb-4">
+		<slot name="header"> {title ?? "HERO TITLE"}</slot>
+	</h1>
+	{
+		subtitle && (
+			<h2 class="mt-8 text-xl font-semibold text-center">{subtitle}</h2>
+		)
+	}
+	<slot />
+</Section>
+
+<style>
+	.hero {
+		background: var(--main);
+	}
+</style>

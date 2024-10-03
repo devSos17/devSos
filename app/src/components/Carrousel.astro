@@ -1,0 +1,27 @@
+---
+import type { isForStatement } from "typescript";
+import Section from "./Section.astro";
+import Card from "./Card.astro";
+interface Props {
+	title: string;
+	id: string;
+	class?: string;
+}
+
+const { id, class: classes, title, ...rest } = Astro.props;
+---
+
+<Section id={id} class={`my-4 flex flex-col ${classes}`} {...rest}>
+	<h2 class="text-gradient w-fit text-5xl mt-4 mb-6">{title}</h2>
+	<div
+		class="w-full flex-grow flex flex-no-wrap gap-4 overflow-x-scroll scrolling-touch items-start"
+	>
+		<slot>
+			{
+				[...Array(10)].map((i) => (
+					<Card class="flex-none w-2/3 md:w-1/3" title={i} />
+				))
+			}
+		</slot>
+	</div>
+</Section>

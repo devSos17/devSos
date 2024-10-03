@@ -1,0 +1,20 @@
+---
+import Card from "./Card.astro";
+import Badge from "./Badge.astro";
+import { type Experience } from "@/types/devSos.ts";
+interface Props {
+	class?: string;
+	exp: Experience;
+}
+
+const { class: classes, exp, ...rest } = Astro.props;
+---
+
+<Card title={exp.title} class={classes}>
+	<ul>
+		{exp.activites.map((activity) => <li>{activity}</li>)}
+	</ul>
+	<div class="flex flex-wrap">
+		{exp.skills.map((skill) => <Badge>{skill}</Badge>)}
+	</div>
+</Card>

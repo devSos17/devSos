@@ -1,22 +1,28 @@
 ---
 interface Props {
-	title: string;
-	body: string;
-	href: string;
+	title?: string;
+	subtitle?: string;
+	href?: string;
 	class?: string;
 }
 
-const { href, title, body, class: classes } = Astro.props;
+const { href, title, subtitle, class: classes } = Astro.props;
 ---
 
-<li class={classes}>
-	<a href={href}>
-		<h2>
-			{title}
-			<span>&rarr;</span>
-		</h2>
-		<p>
-			{body}
-		</p>
+<div class={`py-2 px-4 md:pb-4 rounded-xl ${classes}`}>
+	<a href={href} class="flex flex-col">
+		<slot name="pre-header">
+			{subtitle && <h4> {subtitle} </h4>}
+		</slot>
+		<slot name="header"><h3 class="text-xl text-accent-2">{title}</h3></slot>
+		<slot name="post-header">
+			{subtitle && <h4> {subtitle} </h4>}
+		</slot>
+		<slot
+			>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi omnis
+			mollitia praesentium rerum, consequatur velit provident reiciendis quam,
+			suscipit eum fugit eveniet, aut dolorum non ad magni sint cupiditate?
+			Maxime!</slot
+		>
 	</a>
-</li>
+</div>

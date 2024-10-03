@@ -1,0 +1,35 @@
+---
+import Card from "./Card.astro";
+
+let data = Array.from(Array(100).keys());
+---
+
+<div class="grid grid-cols-3 grid-flow-row gap-4">
+	{
+		data.map((dato) => {
+			let name = "";
+			if (dato % 2 === 0) {
+				name += "foo";
+			}
+			if (dato % 3 === 0) {
+				name += "bazz";
+			}
+			if (!name) {
+				name = `${dato}`;
+			}
+
+			return (
+				<Card
+					class:list={[
+						{ "bg-red-400 col-span-2": name === "bazz" },
+						{ "bg-green-300 row-span-2": name === "foo" },
+						{ "bg-purple-300 col-span-2 row-span-2": name === "foobazz" },
+						"min-h-[100px] border",
+					]}
+				>
+					Soy un {`${dato}:${name}`}
+				</Card>
+			);
+		})
+	}
+</div>

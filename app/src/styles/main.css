@@ -1,0 +1,58 @@
+:root {
+	/* theme 1 | Default Dark */
+	--content: #f2e8cf;
+	--main: #071208;
+	--primary: #2c3615;
+	--secondary: #a8ad9b;
+	--accent1: #a8ed12;
+	--accent2: #a6c856;
+	--accent3: #bd4749;
+	--accent-gradient: radial-gradient(circle,
+			#a8ed1e,
+			#95cc2e,
+			#82ac36,
+			#708d3a,
+			#5d6f3b,
+			#4e5d37,
+			#404c32,
+			#343b2d,
+			#293025,
+			#1e261c,
+			#151c14,
+			#071208);
+}
+
+/* :root[data-theme="theme1"] { */
+@media (prefers-color-scheme: Light) {
+	:root {
+		/* theme 2 | Light theme */
+		--content: 0, 0%, 100%;
+		/* white */
+		--main: #071208;
+		/* midnight */
+		--primay: 132, 29%, 31%;
+		--secondary: 49, 10, 101;
+		--accent1: 92, 32%, 56%;
+		/* olivine */
+		--accent2: 181, 73%, 26%;
+		/* caribbean Current */
+		--accent3: 356, 63%, 54%;
+		/* rusty red */
+	}
+}
+
+html {
+	font-family: system-ui, sans-serif;
+	/* background: #13151a; */
+	/* background: linear-gradient(to top, var(--primary), var(--main));*/
+	background: var(--main);
+	color: var(--content);
+}
+
+.text-gradient {
+	/* background: radial-gradient(circle, red, yellow); */
+	background: var(--accent-gradient);
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+}
